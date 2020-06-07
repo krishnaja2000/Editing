@@ -1,0 +1,78 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from coeffs import *
+#using termux
+import subprocess
+import  shlex
+#def destroy(self):
+	#self.close_event()
+
+
+#given input parameters
+r = 4
+len = 100
+alpha= 2/3*np.pi
+beta= 1/3*np.pi
+
+
+#coodinates of different points
+O = np.array([0,0])
+B = np.array([5,-1])
+C = np.array([r,0])
+
+
+#Generating the circle
+theta = np.linspace(0,2*np.pi,len)
+x_circ = np.zeros((2,len))
+x_circ[0,:] = r*np.cos(theta)
+x_circ[1,:] = r*np.sin(theta)
+x_circ = (x_circ.T + O).T
+
+
+
+
+
+
+#Generating all lines
+x_DB = line_gen(A,B)
+x_EB = line_gen(B,C)
+x_OE = line_gen(C,D)
+x_OC = line_gen(D,A)
+x_OD = line_gen(E,F)
+x_OA = line_gen(A,X)
+
+
+#Plotting all lines
+plt.plot(x_DB[0,:],x_DB[1,:],label='$BD$')
+plt.plot(x_EB[0,:],x_EB[1,:],label='$EB$')
+plt.plot(x_OE[0,:],x_OE[1,:],label='$OE$')
+plt.plot(x_OC[0,:],x_OC[1,:],label='$OC$')
+plt.plot(x_OD[0,:],x_OD[1,:],label='$OD$')
+plt.plot(x_OA[0,:],x_OA[1,:],label='$OA$')
+
+plt.plot(A[0], A[1], 'o')
+plt.text(A[0] * (1 - 0.1), A[1] * (1 + 0.1) , 'A')
+plt.plot(B[0], B[1], 'o')
+plt.text(B[0] * (1 - 0.03), B[1] * (1 + 0.1) , 'B')
+plt.plot(C[0], C[1], 'o')
+plt.text(C[0] * (1 + 0.1), C[1] * (1 + 0.1) , 'C')
+plt.plot(D[0], D[1], 'o')
+plt.text(D[0] * (1 - 0.13), D[1] * (1 - 0.13) , 'D')
+#print(1)
+plt.plot(E[0], E[1], 'o')
+plt.text(E[0] * (1 +0.1), E[1] * (1 + 0.1) , 'E')
+
+
+plt.xlabel('$x$')
+plt.ylabel('$y$')
+plt.legend(loc='best')
+plt.grid() # minor
+plt.axis('equal')
+
+plt.savefig('./pyfigs/circle.eps')
+
+plt.show()
+
+
+#print(5)
+

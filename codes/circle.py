@@ -13,13 +13,17 @@ r = 4
 len = 100
 alpha= 2/3*np.pi
 beta= 1/3*np.pi
+#<EOC = <DOA = delta
+delta= np.pi-(alpha+beta)/2
 
 
 #coodinates of different points
 O = np.array([0,0])
 B = np.array([5,-1])
+A = np.array([r*np.cos(beta),-r*np.sin(beta)])
 C = np.array([r,0])
-
+D = np.array([r*np.cos(alpha+delta),r*np.sin(alpha+delta)])
+E = np.array([r*np.cos(delta),r*np.sin(delta)])
 
 #Generating the circle
 theta = np.linspace(0,2*np.pi,len)
@@ -27,9 +31,6 @@ x_circ = np.zeros((2,len))
 x_circ[0,:] = r*np.cos(theta)
 x_circ[1,:] = r*np.sin(theta)
 x_circ = (x_circ.T + O).T
-
-
-
 
 
 

@@ -56,130 +56,77 @@ r &=\norm{\vec{X}}
 \end{align}
 Where $\theta$ is taken to be the angle measured in anti-clockwise direction from x-axis.
 
-\item Using {eq:point_on_circle}
+\item Using \ref{eq:point_on_circle}
 \begin{align}
 \implies \vec{A} &= \myvec{\cos \beta \\ -\sin \beta}
 \label{eq:constr_a}
 \end{align}
 %
 
-Also, $\vec{B}$ is at a distance from $\vec {A}$ and AB is parallel to x axis. 
-\newline
-From \eqref{eq:constr_a},$\vec{A} = \myvec{x_a\\h}$ 
-Let $\vec{B} = \myvec{x_b\\h}$
+\item In $\triangle AOD$ and $\triangle COE$
 \begin{align}
-a^2 &=\norm{\vec{A}-\vec{B}}^2 = \norm{\vec{A}-\vec{B}}^T\norm{\vec{A}-\vec{B}}  
+OD = OE = r
+OC = OA = r
+AD = EC 
+\end{align}
+So by SSS criteria $\triangle AOD \cong \triangle COE$
+\begin{align}
+\angle EOC = \angle DOA
 \\
-&= \vec{A}^T\vec{A}+\vec{B}^T\vec{B}-\vec{A}^T\vec{B} - \vec{B}^T\vec{A} 
+\angle EOC = \angle DOA = \frac{360^{\circ}-\brak{\alpha+\beta}}{2}
 \\
-&= \norm{\vec{A}}^2 + \norm{\vec{B}}^2 - 2\vec{A}^T\vec{B} \quad \brak{\because \vec{A}^T\vec{B} = \vec{B}^T\vec{A} } 
-\label{eq:tri_const_norm_ac}
-\\
-&= x_a^2+h^2+x_b^2+h^2-2(x_a x_b + h^2)
-\\
-&= \brak{x_a-x_b}^2
-\\
-x_b = x_a + a
-\\
-%\vec{B} &= \myvec{{x_a + a}\\h} 
-\label{eq:constr_b}
+\angle EOC = \angle DOA = 180^{\circ}-\frac{\alpha+\beta}{2}
+\label{eq:equalangles}
 \end{align}
 
-$\vec{E}$ divides AD in the ratio k: 1. 
+\item Using \ref{eq:point_on_circle} and \ref{eq:equalangles}
 \begin{align}
-\frac{AD}{ED} = k+1 
+\vec{D} &= \myvec{\cos \brak{180^{\circ}-\frac{\alpha+\beta}{2}+\alpha} \\ \sin \brak{180^{\circ}-\frac{\alpha+\beta}{2}+\alpha}} 
 \\
-\vec{E} &= \frac{{{k\vec{D}} +\vec{A}}}{k+1}
+\vec{D} &= \myvec{\cos \brak{180^{\circ}+\frac{\alpha-\beta}{2}} \\ \sin \brak{180^{\circ}+\frac{\alpha-\beta}{2}}}
 \\
-%\implies \vec{E} & =\frac{1}{k+1}\myvec{x_a\\h}
-\label{eq:constr_e}
+\vec{D} &= \myvec{-\cos \frac{\alpha-\beta}{2} \\ -\sin \frac{\alpha-\beta}{2}}
+\label{eq:constr_d}
 \end{align}
-%
-Let $\vec{F}$ divide BC in ratio m:1.
 \begin{align}
-\vec{F} &= \frac{{{m\vec{C}} +\vec{B}}}{m+1}
+\vec{E} &= \myvec{\cos \brac{180^{\circ}-\frac{\alpha+\beta}{2}} \\ \sin \brac{180^{\circ}-\frac{\alpha+\beta}{2}}}
 \\
-%\vec{F} &=\frac{1}{m+1} \myvec{cm +x_a + a\\h}
-\label{eq:findm}
+\vec{E} &= \myvec{-\cos \frac{\alpha+\beta}{2} \\ \sin \frac{\alpha+\beta}{2}}
+
 \end{align}
-EF is parallel to DC and hence the x axis. So we equate y coordinates of E and F to find m.
-\\
-from \ref{eq:constr_e} and \ref{eq:findm}
-\begin{align}
-\frac{h}{k+1} = \frac{h}{m+1}
-\\
- m = k 
-\\
-\vec{F} &= \frac{{k\vec{C} +\vec{B}}}{k+1}
-\\
-%\vec{F} &=\frac{1}{k+1} \myvec{ck +x_a + a\\h}
-\label{eq:constr_f}
-\end{align}
-%
-The values are listed in \ref{table:table2}. 
+
+
+The derived coordinates are listed in \ref{table:table2}. 
 %
 \begin{table}[ht!]
 \centering
 \input{./tables/out.tex}
-\caption{Derived coordinates trapezium ABCD}
+\caption{Derived coordinates}
 \label{table:table2}	
 \end{table}
- 
-%\item List the  derived values.
-%\label{const:table2}
-%\\
-%\solution See  
-%Table. \ref{table:table2} 
-%\begin{table}[ht!]
-%\centering
-%\begin{tabular}{ |p{3cm}|p{3cm}|  }
-%\hline
-% \multicolumn{2}{|c|}{Derived Values.} \\
-%\hline
-%$\vec{A}$ & $\begin{pmatrix}4\\3\end{pmatrix}$\\
-%\hline
-%$\vec{B}$ & $\begin{pmatrix}8\\3\end{pmatrix}$\\
-%\hline
-%$\vec{E}$ & $\begin{pmatrix}2\\1.5\end{pmatrix}$\\
-%\hline
-%$\vec{F}$ & $\begin{pmatrix}8.5\\1.5\end{pmatrix}$\\
-%\hline
-%$\vec{M}$ & $\begin{pmatrix}4\\1.5\end{pmatrix}$\\
-%\hline
-%$\vec{N}$ & $\begin{pmatrix}8\\1.5\end{pmatrix}$\\
-%\hline
-%$\vec{X}$ & $\begin{pmatrix}4\\0\end{pmatrix}$\\
-%\hline
-%$\vec{Y}$ & $\begin{pmatrix}8\\0\end{pmatrix}$\\
-%\hline
-%\end{tabular}
-%\caption{To construct Trapezium ABCD}
-%\label{table:table2}
-%\end{table}
-%
-\item Draw Fig. \ref{fig:trapezium_ABCD} using python	
+\item Draw Fig. \ref{fig:circle} using python	
 \\
-\solution The  following Python code generates Fig. \ref{fig:trapezium_ABCD}
+\solution The  following Python code generates Fig. \ref{fig:circle}
 %
 \begin{lstlisting}
-codes/prob.py
+codes/circle.py
 \end{lstlisting}
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./codes/pyfigs/pyfigs.eps}
-\caption{Trapezium ABCD generated using python}
-\label{fig:trap_py}
+\includegraphics[width=\columnwidth]{./codes/pyfigs/circle.eps}
+\caption{Circle with two chords intersecting at external point B}
+\label{fig:circle_py}
 \end{figure}
 
 %
 and the equivalent latex-tikz code generating Fig. \ref{fig:trapezium_ABCD} is 
 \begin{lstlisting}
-figs/prob.tex
+figs/circle.tex
 \end{lstlisting}
 %
 The above latex code can be compiled as a standalone document as
 \begin{lstlisting}
-figs/prob_alone.tex
+figs/circle_alone.tex
 \end{lstlisting}
 
 %

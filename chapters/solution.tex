@@ -2,30 +2,28 @@
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 
-\item Vertices of the quadrilateral are,
+\item We represent town A by $\vec{A}$ and town B by $\vec{B}$.
+\newline
+If $\vec{A}$ is taken to be the origin and East and North directions are considered to be +ve x-axis and +ve y-axis respectively, Then $\vec{B}$ is given as
 \begin{align}
-\vec{A}=\myvec{-4\\5}
-\vec{B}=\myvec{0\\7}
-\vec{C}=\myvec{5\\-5}
-\vec{D}=\myvec{-4\\-2}
+\vec{B}=\myvec{36\\15}
 \end{align}
-Quadrilateral ABCD is drawn by joining its vertices $\vec{A}$ and $\vec{B}$,$\vec{B}$ and $\vec{C}$, $\vec{C}$ and $\vec{D}$, $\vec{D}$ and $\vec{A}$.
- The  following Python code generates Fig. \ref{fig:first_py}
+The distance d between A and B is given by
+\begin{align}
+d = \norm{\vec{A}-\vec{B}}
+\\
+d=39km
+\end{align}
+ The  following Python code generates Fig. \ref{fig:towns}
 %
 \begin{lstlisting}
-codes/quad/firstline.py
+codes/quad/towns.py
 \end{lstlisting}
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./codes/quad/pyfigs/firstline.eps}
-\caption{Quadrilateral ABCD}
-\label{fig:quad_py}
+\includegraphics[width=\columnwidth]{./codes/towns/pyfigs/towns.eps}
+\caption{Position of Towns A and D}
+\label{fig:towns_py}
 \end{figure}
-
-\item From Figure \ref{fig:quad_py} Area of the Quadrilateral ABCD can be given as
-\begin{align}
-Ar\brak{\triangle ABC} + Ar\brac{triangle BCD}
-\\
-frac{1}{2} \norm{\brak{\vec{A}-\vec{B}}x\brak{\vec{A}-\vec{D}}} + frac{1}{2} \norm{\brak{\vec{C}-\vec{B}}x\brak{\vec{C}-\vec{D}}}
-\end{align}
+So the distance between Town A and Town B is 39km.
 \end{enumerate}

@@ -2,37 +2,30 @@
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 
-\item 
+\item We know that centroid divides a median in ratio 2:1. So, by section formulae on median AD,
 \begin{align}
-\frac{3x-4}{2} \geq \frac{x+1}{4} - 1
-\\
-\frac{3x-4}{2}-\frac{x+1}{4} \geq -1
+\implies \vec{O}=\frac{2\vec{D}+\vec{A}}{3}
+\label{eq:centr}
 \end{align}
-\item Make RHS positive by multiplying with -1 on both sides , Inequality changes.
+Also D id the midpoint of side BC
 \begin{align}
--\frac{3x-4}{2}+\frac{x+1}{4} \leq 1
+\implies \vec{D}=\frac{\vec{B}+\vec{C}}{2}
+\label{eq:pointd}
 \end{align}
-\item Convert $\leq$ sign to = sign by adding slack variable s on the LHS such that s is non-negative , That is
+Substituting \ref{eq:pointd} in \ref{eq:centr} we get
 \begin{align}
-s \geq 0
-\implies -\frac{3x-4}{2}+\frac{x+1}{4} + s = 1
-\\
-\implies -5x+9+4s=4
-\\
-\implies x=1+frac{4s}{5}
-\\
-\implies x \geq 1
+\implies \vec{O}=\frac{\vec{B}+\vec{C}+\vec{A}}{3}
 \end{align}
 
-The following code marks the solution of inequality on numberline as shown in figure \ref{fig:ineq_py}
+The following code plots figure \ref{fig:median}
 \begin{lstlisting}
-codes/ineq/ineq.py
+codes/median/median.py
 \end{lstlisting}
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./codes/ineq/pyfigs/ineq.eps}
-\caption{Solution of the inequality}
-\label{fig:ineq_py}
+\includegraphics[width=\columnwidth]{./codes/median/pyfigs/median.eps}
+\caption{Triangle ABC with centroid O}
+\label{fig:median}
 \end{figure}
 
 \end{enumerate}

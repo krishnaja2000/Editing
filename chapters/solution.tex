@@ -2,12 +2,38 @@
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 
-\item 
+\item $\vec{x}=\myvec{x\\y}$ id the solution, Then for every value of x , there is corresponding value of y. 
+Let $\myvec{0\\a}$ and $\myvec{1\\b}$ be the two solutions of equation \ref{eq:pointonline1}.Then
 \begin{align}
-\vec{A}=\myvec{-3\\10}
-\vec{B}=\myvec{6\\-8}
-\vec{C}=\myvec{-1\\6}
+ \myvec{4&3}\myvec{0\\a}=12
+ \implies a=4
+ \\
+ \myvec{4&3}\myvec{1\\b}=12
+ \implies y=\frac{8}{3}
 \end{align}
+So $\myvec{0\\4}$ and $\myvec{1\\\frac{8}{3}}$ are the two solutions of \ref{eq:pointonline1}
+
+\item 
+Let $\myvec{0\\a}$ and $\myvec{1\\b}$ be the two solutions of equation \ref{eq:pointonline2}.Then
+\begin{align}
+ \myvec{2&5}\myvec{0\\a}=0
+ \implies a=0
+ \\
+ \myvec{2&5}\myvec{1\\b}=0
+ \implies b=\frac{-2}{5}
+\end{align}
+
+So $\myvec{0\\0}$ and $\myvec{1\\\frac{-2}{5}}$ are the two solutions of \ref{eq:pointonline2}
+\item 
+Let $\myvec{x\\0}$ and $\myvec{0\\y}$ be the two solutions of equation \ref{eq:pointonline1}.Then
+\begin{align}
+ \myvec{4&3}\myvec{x\\0}=12
+ \implies x=3
+ \\
+ \myvec{4&3}\myvec{0\\y}=12
+ \implies y=4
+\end{align}
+So $\myvec{3\\0}$ and $\myvec{0\\4}$ are the two solutions of \ref{eq:pointonline1}
 Let $\vec{C}$ divide AB in ratio k:1.Then by section formulae,
 \begin{align}
 \vec{C}=\frac{k\vec{B}+\vec{A}}{k+1}

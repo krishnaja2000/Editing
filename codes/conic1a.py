@@ -7,7 +7,6 @@ p=np.poly1d([1,0,0])
 for i in range(len(y)):
     x=p(y)
 
-roots=p.r
 A=np.array([0,p(0)])
 B=np.array([1,p(1)])
 C=np.array([2,p(2)])
@@ -17,7 +16,7 @@ plt.plot(B[0], B[1], 'o')
 plt.text(B[0] * (1-0.5), B[1] * (1-0.1) , 'p(1)')
 plt.plot(C[0], C[1], 'o')
 plt.text(C[0] * (1-0.5), C[1] * (1-0.1) , 'p(2)')
-plt.plot(x,y)
+plt.plot(y,x)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.legend(loc='best')

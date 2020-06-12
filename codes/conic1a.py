@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+import subprocess
+import  shlex
 y = np.linspace(-1,1,100)
 p=np.poly1d([1,0,0])
 for i in range(len(y)):
@@ -22,4 +23,5 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
+plt.savefig('./pyfigs/conic1a.eps')
 plt.show() 
